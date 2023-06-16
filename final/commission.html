@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xayah1106's commissionsite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./adrx9-lzom8-001.ico" type="image/x-icon">
+    <style>
+        @media screen and (max-width: 1024px) and (min-width: 720px) {
+            li {
+                flex-basis: 50%;
+            }
+            img {
+                width: 50%;
+                vertical-align: middle;
+            }
+            #btn {
+                width: 60%;
+            }
+        }
+        
+        @media screen and (max-width: 720px) {
+            li {
+                flex-basis: 100%;
+            }
+            img {
+                width: 30%;
+                vertical-align: middle;
+            }
+        }
+        
+        a:hover {
+            color: #5f2e2e;
+            background-color: darkmagenta;
+        }
+        
+        body {
+            text-align: center;
+            margin: 50px;
+            margin-top: auto;
+            background-image: url("./插圖91.jpg");
+            background-color: wheat;
+        }
+        
+        p {
+            font-size: 20px;
+        }
+        
+        article {
+            background-color: rgba(78, 142, 140, 0.8);
+            margin: 5%;
+            border-radius: 33px;
+            color: aliceblue;
+        }
+        
+        .budget {
+            width: 80%;
+            text-align: center;
+            margin: auto
+        }
+        
+        i {
+            font-size: large;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        function result() {
+            var total = 0;
+            for (var i = 1; i <= 5; i++) {
+                var decide = document.getElementById("decide" + i);
+                console.log(decide.checked);
+                if (decide.checked) {
+                    var charge = document.getElementById("charge" + i).value;
+                    console.log(charge);
+                    total += parseFloat(charge);
+                }
+            }
+            if (total === 0) {
+                alert("You haven't buy anything,but thanks 4 your visit!");
+            } else if (isNaN(total)) {
+                alert("You forgot to give the budget!");
+            } else {
+                alert("The total prise is " + total + "$NT.Please wait for creator's respones,or you can contact me at my social media.");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    ...
+              </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <li class="nav-item">
+                                        <img src="./插圖36.jpg" width="50px">
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="http://127.0.0.1:5500/intro.html" target="_self">My intro</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="http://127.0.0.1:5500/arts.html">My art works</a>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="http://127.0.0.1:5500/commission.html">Commission<i class="fas fa-caret-down"></i></a>
+                                        </li>
+                                    </li>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+    <article>
+        <h1>
+            Name your prise<br>
+        </h1>
+        <p>
+            <h4>head digital portrait</h4>start up with 100$NT<br>
+            <input type="checkbox" id="decide1" style="width:20px;height:20px;"><i>Purchase</i>
+            <input class="form-control budget " id="charge1" type="number" placeholder="budget ">
+
+            <h4>half body design</h4>start up with 300$NT<br>
+            <input type="checkbox" id="decide2" style="width:20px;height:20px;"><i>Purchase</i>
+            <input class="form-control budget " id="charge2" type="number" placeholder="budget ">
+
+            <h4>full body design</h4>start up with 500$NT<br>
+            <input type="checkbox" id="decide3" style="width:20px;height:20px;"><i>Purchase</i>
+            <input class="form-control budget " id="charge3" type="number" placeholder="budget ">
+
+            <h4>full-body standing drawing of a character</h4>start up with 600$NT<br>
+            <input type="checkbox" id="decide4" style="width:20px;height:20px;"><i>Purchase</i>
+            <input class="form-control budget " id="charge4" type="number" placeholder="budget ">
+
+            <h4>concept sence art</h4>start up with 800$NT<br>
+            <input type="checkbox" id="decide5" style="width:20px;height:20px;"><i>Purchase</i>
+            <input class="form-control budget " id="charge5" type="number" placeholder="budget "><br>
+
+            <button class="form-control" id="btn" style="background-color:aqua; color:red; font:bold; width:60%; margin: auto" onclick="result()">send out!</button><br>
+        </p>
+    </article>
+    <audio src="./ｍａｇｉｃ (lofi hip hop).mp3" preload="auto" loop="true" autoplay="true" volume="0.1"></audio>
+</body>
+
+</html>
